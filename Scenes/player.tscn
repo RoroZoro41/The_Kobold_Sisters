@@ -1,10 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://cdrlc0s5jotte"]
+[gd_scene load_steps=4 format=3 uid="uid://cdrlc0s5jotte"]
 
+[ext_resource type="Script" path="res://Scenes/player.gd" id="1_53i50"]
 [ext_resource type="Texture2D" uid="uid://bfydqp48ijdw1" path="res://Sprites/lulu.png" id="1_083ke"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bpnrh"]
+size = Vector2(100, 100)
+
 [node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_53i50")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(10, 10)
 texture = ExtResource("1_083ke")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_bpnrh")
