@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d1i2ig41c28f2"
-path="res://.godot/imported/ridiculous.svg-e21db04d9320e3effae5aa7f8ec5a426.ctex"
+uid="uid://do6avbsdt8lhh"
+path="res://.godot/imported/icon.svg-b67cfb692a937e61d2bda8561d9e8db7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ridiculous.svg"
-dest_files=["res://.godot/imported/ridiculous.svg-e21db04d9320e3effae5aa7f8ec5a426.ctex"]
+source_file="res://Sprites/icon.svg"
+dest_files=["res://.godot/imported/icon.svg-b67cfb692a937e61d2bda8561d9e8db7.ctex"]
 
 [params]
 

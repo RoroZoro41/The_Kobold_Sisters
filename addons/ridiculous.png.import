@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://5sjyau3eho57"
-path="res://.godot/imported/ridiculous.png-a64a78ecb1ff54430110261923f7dd4f.ctex"
+path="res://.godot/imported/ridiculous.png-4135992b2ab7447190f13a701c3cfe63.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://ridiculous.png"
-dest_files=["res://.godot/imported/ridiculous.png-a64a78ecb1ff54430110261923f7dd4f.ctex"]
+source_file="res://addons/ridiculous.png"
+dest_files=["res://.godot/imported/ridiculous.png-4135992b2ab7447190f13a701c3cfe63.ctex"]
 
 [params]
 
