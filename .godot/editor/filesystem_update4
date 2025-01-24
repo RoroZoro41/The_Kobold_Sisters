@@ -1,4 +1,3 @@
 res://Scenes/main.tscn
 res://Scenes/player.tscn
 res://Scripts/player.gd
-res://default_env.tres

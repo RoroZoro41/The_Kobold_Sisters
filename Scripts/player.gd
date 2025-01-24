@@ -6,8 +6,8 @@ var speed_acceleration: float = speed/3
 var speed_deceleration: float = speed/3
 
 #dodging
-var dodging_length: float = 0.1
-var is_dodging:bool = false
+@onready var dash_cooldown:Timer = $"Timers/Dash cooldown"
+var dodging_length: float = 0.05
 
 func  _physics_process(_delta: float) -> void:
 	
@@ -23,21 +23,27 @@ func  _physics_process(_delta: float) -> void:
 	move_and_slide()
 
 func dodge():
-	if is_dodging:
+# If you moving, or dash cooldown is active, exit function
+	if not dash_cooldown.is_stopped() or velocity == Vector2.ZERO :
 		return
-	is_dodging = true
+
+#TEMPORARY LINE, DELETE SOON
+	invincible(0.3)
+
+	dash_cooldown.start()
 	var original_speed = speed
 	var original_speed_acceleration = speed_acceleration
-	var origonal_speed_deceleration = speed_deceleration
 	
 	# Mulitplying speed
 	speed *= 4
 	speed_acceleration *= 4
-	speed_deceleration *= 4
 	
 	await get_tree().create_timer(dodging_length).timeout
 	speed = original_speed
 	speed_acceleration = original_speed_acceleration
-	speed_deceleration = origonal_speed_deceleration
 	
-	is_dodging = false
+
+func invincible(invincibility_length:float = 0.5):
+	$Sprite2D.self_modulate.a = 0.5
+	await get_tree().create_timer(invincibility_length).timeout
+	$Sprite2D.self_modulate.a = 1

@@ -1,6 +1,5 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1736935150
-LICENSE.md::TextFile::-1::1734175924::0::1::::<><>::
+::res://::1737759542
 ::res://addons/::1735037528
 ridiculous.png::CompressedTexture2D::2143413452876581068::1734175862::1735037528::1::::<><>::
 ridiculous.svg::CompressedTexture2D::9002341013981079233::1734175862::1735037528::1::::<><>::
@@ -56,8 +55,8 @@ typewriter.wav::AudioStreamWAV::1929326941576686422::1734175925::1734175926::1::
 ::res://Scenes/::1736935144
 main.tscn::PackedScene::1025729347880039048::1736935144::0::1::::<><>::uid://cdrlc0s5jotte::::res://Scenes/player.tscn
 player.tscn::PackedScene::5019175120893452054::1736935144::0::1::::<><>::res://Scripts/player.gd<>uid://bfydqp48ijdw1::::res://Sprites/lulu.png
-::res://Scripts/::1736934983
-player.gd::GDScript::-1::1736934983::0::1::::<>CharacterBody2D<>::
+::res://Scripts/::1736937943
+player.gd::GDScript::-1::1736937943::0::1::::<>CharacterBody2D<>::
 ::res://Sprites/::1736935150
 icon.svg::CompressedTexture2D::8205939154552448697::1734116386::1736935150::1::::<><>::
 lulu.png::CompressedTexture2D::2787121525821473210::1734117108::1734117110::1::::<><>::
