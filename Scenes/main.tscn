@@ -1,8 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://ou4u3bv854um"]
+[gd_scene load_steps=3 format=3 uid="uid://ou4u3bv854um"]
 
 [ext_resource type="PackedScene" uid="uid://cdrlc0s5jotte" path="res://Scenes/player.tscn" id="1_6lryt"]
+[ext_resource type="PackedScene" uid="uid://daspw43dikf8j" path="res://Scenes/temp_enemy_shooter.tscn" id="2_wkghl"]
 
 [node name="main" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_6lryt")]
-position = Vector2(588, 347)
+position = Vector2(560, 322)
+scale = Vector2(1, 1)
+
+[node name="Temp enemy shooter" parent="." instance=ExtResource("2_wkghl")]
+position = Vector2(50, 170)
