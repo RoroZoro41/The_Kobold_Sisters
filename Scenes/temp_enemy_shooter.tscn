@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://daspw43dikf8j"]
+
+[ext_resource type="Texture2D" uid="uid://dj4jjlupt0mcc" path="res://Sprites/Sea lizorse.png" id="1_1o6d1"]
+[ext_resource type="Script" path="res://Scripts/temp_enemy_shooter.gd" id="1_gypfn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_spvoc"]
+size = Vector2(100, 120)
+
+[node name="Temp enemy shooter" type="CharacterBody2D" groups=["Enemy"]]
+script = ExtResource("1_gypfn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.249221, 0.259179)
+texture = ExtResource("1_1o6d1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_spvoc")
+
+[node name="Shooting cooldown" type="Timer" parent="."]
+autostart = true
+
+[connection signal="timeout" from="Shooting cooldown" to="." method="_on_shooting_cooldown_timeout"]

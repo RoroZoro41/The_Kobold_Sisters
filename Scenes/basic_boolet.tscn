@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://bcdpke6434w5h"]
+
+[ext_resource type="Script" path="res://Scripts/basic_boolet.gd" id="1_c0vhs"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xkbuv"]
+size = Vector2(50, 50)
+
+[node name="Basic boolet" type="CharacterBody2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_c0vhs")
+metadata/_edit_horizontal_guides_ = [-25.0]
+metadata/_edit_vertical_guides_ = [-25.0]
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.86, 0.2924, 0.387, 1)
+polygon = PackedVector2Array(-25, 0, -25, -10, -10, -25, 10, -25, 25, -10, 25, 10, 10, 25, -10, 25, -25, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_xkbuv")
+debug_color = Color(0, 0.595, 0.7, 0.321569)
