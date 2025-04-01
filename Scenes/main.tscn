@@ -6,7 +6,7 @@
 [node name="main" type="Node2D"]
 
 [node name="Player" parent="." instance=ExtResource("1_6lryt")]
-position = Vector2(560, 322)
+position = Vector2(450, 340)
 scale = Vector2(1, 1)
 
 [node name="Temp enemy shooter" parent="." instance=ExtResource("2_wkghl")]

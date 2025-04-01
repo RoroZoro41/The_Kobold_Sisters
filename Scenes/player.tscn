@@ -1,21 +1,24 @@
-[gd_scene load_steps=4 format=3 uid="uid://cdrlc0s5jotte"]
+[gd_scene load_steps=5 format=3 uid="uid://cdrlc0s5jotte"]
 
 [ext_resource type="Script" path="res://Scripts/player.gd" id="1_5bry1"]
 [ext_resource type="Texture2D" uid="uid://bfydqp48ijdw1" path="res://Sprites/lulu.png" id="1_083ke"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bpnrh"]
-size = Vector2(100, 100)
+size = Vector2(50, 50)
 
-[node name="Player" type="CharacterBody2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_l1fbx"]
+radius = 100.0
+
+[node name="Lulu" type="CharacterBody2D"]
 scale = Vector2(0.5, 0.5)
 motion_mode = 1
 script = ExtResource("1_5bry1")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(10, 10)
+[node name="LuluSprite" type="Sprite2D" parent="."]
+scale = Vector2(5, 5)
 texture = ExtResource("1_083ke")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="LuluCollision" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_bpnrh")
 
 [node name="Timers" type="Node2D" parent="."]
@@ -23,3 +26,14 @@ shape = SubResource("RectangleShape2D_bpnrh")
 [node name="Dash cooldown" type="Timer" parent="Timers"]
 wait_time = 0.5
 one_shot = true
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_l1fbx")
+
+[node name="Label" type="Label" parent="."]
+offset_left = -20.0
+offset_top = -60.0
+offset_right = 20.0
+offset_bottom = -37.0

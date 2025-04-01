@@ -1,0 +1,3 @@
+Make dodge not need an input direction, and you will just dodge at your last moved direction
+
+fix the speed modification in shooting and dodging

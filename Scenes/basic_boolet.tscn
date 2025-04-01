@@ -16,5 +16,14 @@ color = Color(0.86, 0.2924, 0.387, 1)
 polygon = PackedVector2Array(-25, 0, -25, -10, -10, -25, 10, -25, 25, -10, 25, 10, 10, 25, -10, 25, -25, 10)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("RectangleShape2D_xkbuv")
 debug_color = Color(0, 0.595, 0.7, 0.321569)
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="AreaCollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_xkbuv")
+debug_color = Color(0, 0.595, 0.7, 0.321569)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
