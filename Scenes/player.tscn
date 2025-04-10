@@ -38,4 +38,26 @@ offset_top = -60.0
 offset_right = 20.0
 offset_bottom = -37.0
 
+[node name="Bow" type="Node2D" parent="."]
+
+[node name="Bow Strength visualizer" type="Control" parent="Bow"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Bow Strength Bar" type="ProgressBar" parent="Bow/Bow Strength visualizer"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -80.0
+offset_top = -60.0
+offset_right = 80.0
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 0
+show_percentage = false
+
 [connection signal="timeout" from="Timers/Dash cooldown" to="." method="_on_dash_cooldown_timeout"]

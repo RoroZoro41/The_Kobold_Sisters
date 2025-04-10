@@ -14,12 +14,15 @@ var is_drawingBow_speedAndAccelerationModifier = false
 var speed_bow_multiplier: float = 0.4
 var acceleration_bow_multiplier: float = 10
 
-#dodging
+# Shooting
+@onready var bow_strength_bar: ProgressBar = $"Bow/Bow Strength visualizer/Bow Strength Bar"
+var bow_strength_increase = 2
+
+#dodging (dodge length is determined by Timer node)
 @onready var dash_cooldown:Timer = $"Timers/Dash cooldown"
-var dodging_length: float = 0.05
 
 func  _physics_process(_delta: float) -> void:
-	$Label.text = str(velocity)
+	#$Label.text = str(velocity)
 	
 #region Movement
 #PLAYER INPUTS
@@ -37,6 +40,9 @@ func  _physics_process(_delta: float) -> void:
 		shoot()
 	if Input.is_action_just_released("shoot"): 
 		is_drawingBow_speedAndAccelerationModifier = false
+		#Resets the bow strength loading bar to be null and invisible
+		bow_strength_bar.value = 0
+		bow_strength_bar.visible = false
 #endregion
 	
 	if Input.is_action_just_pressed("dodge"): dodge()
@@ -69,7 +75,9 @@ func shoot():
 		return
 	is_drawingBow_speedAndAccelerationModifier = true
 	
+	bow_strength_bar.visible = true
 	
+	bow_strength_bar.value += bow_strength_increase
 
 func dodge():
 # If you moving, or dash cooldown is active, exit function
