@@ -1,7 +1,14 @@
+res://addons/ridiculous_coding/resources/effects/blip.tscn
+res://addons/ridiculous_coding/resources/effects/boom.tscn
+res://addons/ridiculous_coding/resources/effects/key.tscn
+res://addons/ridiculous_coding/resources/effects/newline.tscn
+res://addons/ridiculous_coding/resources/effects/sound.tscn
+res://addons/ridiculous_coding/resources/interfaces/dock.tscn
+res://addons/ridiculous_coding/resources/interfaces/settings_window.tscn
+res://addons/ridiculous_coding/resources/interfaces/skill_window.tscn
+res://Scenes/basic_boolet.tscn
 res://Scenes/main.tscn
 res://Scenes/player.tscn
 res://Scenes/temp_enemy_shooter.tscn
-res://Scenes/basic_boolet.tscn
-res://Scripts/basic_boolet.gd
-res://ToDo.txt
 res://Scripts/player.gd
+res://ToDo.txt

@@ -3,63 +3,90 @@ extends CharacterBody2D
 @onready var lulu_sprite: Sprite2D = $LuluSprite
 
 #player speed
-const speed: float = 500
-var speed_Modifier: float = 1
-var speed_acceleration: float = speed/3
-var speed_deceleration: float = speed/3
-	#multiplication of speed during dashes
-var speed_acceleration_dash_multiplication: float = 4
-var speed_dash_multiplication: float = 4
-	#multiplication of speed during bow draw
-var speed_acceleration_bow_multiplication: float = 0.4
-var speed_bow_multiplication: float = 0.4
+const base_speed: float = 500
+const base_acceleration: float = 170
+	#multiplier of speed and acceleration during dashes
+var is_dodging_speedAndAccelerationModifier = false
+var speed_dash_multiplier: float = 4
+var acceleration_dash_multiplier: float = 10
+	#multiplier of speed and acceleration during bow draw
+var is_drawingBow_speedAndAccelerationModifier = false
+var speed_bow_multiplier: float = 0.4
+var acceleration_bow_multiplier: float = 10
 
 #dodging
 @onready var dash_cooldown:Timer = $"Timers/Dash cooldown"
 var dodging_length: float = 0.05
 
 func  _physics_process(_delta: float) -> void:
-	$Label.text = str(speed_acceleration)
+	$Label.text = str(velocity)
+	
 #region Movement
 #PLAYER INPUTS
 	# Player slowly moves up to target speed, then slowly slows down to zero
 	var direction = Input.get_vector("left","right","up","down")
 	if (direction):
-		velocity = velocity.move_toward(direction * (speed * speed_Modifier), speed_acceleration)
+		velocity = velocity.move_toward(direction * final_speed(),
+		#speed_acceleration * acceleration_dash_multiplier)
+		final_acceleration())
 	else:
-		velocity = velocity.move_toward(Vector2.ZERO, speed_deceleration)
+		velocity = velocity.move_toward(Vector2.ZERO, base_acceleration)
 #endregion
-	if Input.is_action_just_pressed("dodge"): dodge()
 #region Shooting
-	if Input.is_action_just_pressed("shoot"): 
+	if Input.is_action_pressed("shoot"): 
 		shoot()
 	if Input.is_action_just_released("shoot"): 
-		speed_Modifier *= 1/speed_acceleration_bow_multiplication
+		is_drawingBow_speedAndAccelerationModifier = false
 #endregion
+	
+	if Input.is_action_just_pressed("dodge"): dodge()
+	
 	move_and_slide()
 
+func final_speed() -> float:
+	var final_speed = base_speed
+	
+	if is_dodging_speedAndAccelerationModifier:
+		final_speed *= speed_dash_multiplier
+	if is_drawingBow_speedAndAccelerationModifier:
+		final_speed *= speed_bow_multiplier
+	
+	return final_speed
+
+func final_acceleration() -> float:
+	var final_acceleration = base_acceleration
+	
+	if is_dodging_speedAndAccelerationModifier:
+		final_acceleration *= acceleration_dash_multiplier
+	if is_drawingBow_speedAndAccelerationModifier:
+		final_acceleration *= acceleration_bow_multiplier
+	
+	return final_acceleration
+
 func shoot():
-	# Mulitplying speed
-	speed_Modifier *= speed_acceleration_bow_multiplication
+#	if you are in the middle of dodging, leave function
+	if is_dodging_speedAndAccelerationModifier:
+		return
+	is_drawingBow_speedAndAccelerationModifier = true
+	
 	
 
 func dodge():
 # If you moving, or dash cooldown is active, exit function
-	if not dash_cooldown.is_stopped() or velocity == Vector2.ZERO :
+	if velocity == Vector2.ZERO or not dash_cooldown.is_stopped() :
 		return
 	
-#TEMPORARY LINE, DELETE SOON
-	invincible(dash_cooldown.time_left)
+	is_dodging_speedAndAccelerationModifier = true
 	
 	dash_cooldown.start()
 	
-	# Mulitplying speed
-	speed_Modifier *= speed_dash_multiplication
-	speed_acceleration *= speed_acceleration_dash_multiplication
-	# Wait [dodging_length] amount of time before ending the dash
-	await get_tree().create_timer(dodging_length).timeout
-	speed_Modifier *= speed_dash_multiplication
-	speed_acceleration *= speed_acceleration
+#TEMPORARY LINE, DELETE SOON
+	invincible(dash_cooldown.time_left)
+
+	#check _on_dash_cooldown_timeout() to see what happens when dash ends
+func _on_dash_cooldown_timeout() -> void:
+	is_dodging_speedAndAccelerationModifier = false
+	
 
 func invincible(invincibility_length:float = 0.5):
 	lulu_sprite.self_modulate.a = 0.5

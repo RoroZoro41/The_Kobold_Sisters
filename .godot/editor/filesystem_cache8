@@ -1,16 +1,17 @@
 ea4bc82a6ad023ab7ee23ee620429895
-::res://::1743493949
-::res://addons/::1735041128
+::res://::1744306849
+ToDo.txt::TextFile::-1::1743505481::0::1::::<><>::
+::res://addons/::1743493953
 ridiculous.png::CompressedTexture2D::2143413452876581068::1734179462::1743493953::1::::<><>::
 ridiculous.svg::CompressedTexture2D::9002341013981079233::1734179462::1743493953::1::::<><>::
-::res://addons/ridiculous_coding/::1734179525
+::res://addons/ridiculous_coding/::1743493952
 font.tres::FontFile::3906615943650166882::1734179524::0::1::::<><>::uid://coiaqb8xwuaic::::res://addons/ridiculous_coding/gravity_bold_8.ttf
 gravity_bold_8.ttf::FontFile::5772028877630708402::1734179524::1743493952::1::::<><>::
 plugin.cfg::TextFile::-1::1734179524::0::1::::<><>::
 plugin.gd::GDScript::-1::1734179524::0::1::::<>EditorPlugin<>::
 stats.gd::GDScript::-1::1734179525::0::1::::StatsDataRC<>Resource<>::
 themes.gd::GDScript::-1::1734179525::0::1::::ThemeDataRc<>Resource<>::
-::res://addons/ridiculous_coding/images/::1734179526
+::res://addons/ridiculous_coding/images/::1743493953
 blip.png::CompressedTexture2D::9023907321475517740::1734179524::1743493953::1::::<><>::
 boom.png::CompressedTexture2D::7999229798388025044::1734179524::1743493953::1::::<><>::
 chat-info.png::CompressedTexture2D::5113465995450136220::1734179524::1743493952::1::::<><>::
@@ -45,23 +46,23 @@ skill_window.tscn::PackedScene::1190745948966489829::1734179525::0::1::::<><>::r
 ::res://addons/ridiculous_coding/resources/others/::1734179525
 xp_calculator.gd::GDScript::-1::1734179525::0::1::::RcXpCalculator<>Node<>::
 ::res://addons/ridiculous_coding/sounds/::1734179525
-::res://addons/ridiculous_coding/sounds/deletion/::1734179526
+::res://addons/ridiculous_coding/sounds/deletion/::1743493953
 boom.wav::AudioStreamWAV::4632206838498822877::1734179525::1743493953::1::::<><>::
-::res://addons/ridiculous_coding/sounds/others/::1734179526
+::res://addons/ridiculous_coding/sounds/others/::1743493953
 fireworks.wav::AudioStreamWAV::8862151449780033529::1734179525::1743493953::1::::<><>::
-::res://addons/ridiculous_coding/sounds/typing/::1734179526
+::res://addons/ridiculous_coding/sounds/typing/::1743493953
 blip.wav::AudioStreamWAV::4311277633861190701::1734179525::1743493953::1::::<><>::
 typewriter.wav::AudioStreamWAV::1929326941576686422::1734179525::1743493953::1::::<><>::
-::res://Scenes/::1737999092
-basic_boolet.tscn::PackedScene::2533920376400439523::1737999092::0::1::::<><>::res://Scripts/basic_boolet.gd
-main.tscn::PackedScene::1025729347880039048::1737999092::0::1::::<><>::uid://cdrlc0s5jotte::::res://Scenes/player.tscn<>uid://daspw43dikf8j::::res://Scenes/temp_enemy_shooter.tscn
-player.tscn::PackedScene::5019175120893452054::1737999092::0::1::::<><>::res://Scripts/player.gd<>uid://bfydqp48ijdw1::::res://Sprites/lulu.png
-temp_enemy_shooter.tscn::PackedScene::7197372459588858543::1737999092::0::1::::<><>::uid://dj4jjlupt0mcc::::res://Sprites/Sea lizorse.png<>res://Scripts/temp_enemy_shooter.gd
-::res://Scripts/::1737998185
-basic_boolet.gd::GDScript::-1::1737998185::0::1::::<>CharacterBody2D<>::
-player.gd::GDScript::-1::1737998185::0::1::::<>CharacterBody2D<>::
+::res://Scenes/::1743505481
+basic_boolet.tscn::PackedScene::2533920376400439523::1743505481::0::1::::<><>::res://Scripts/basic_boolet.gd
+main.tscn::PackedScene::1025729347880039048::1743505481::0::1::::<><>::uid://cdrlc0s5jotte::::res://Scenes/player.tscn<>uid://daspw43dikf8j::::res://Scenes/temp_enemy_shooter.tscn
+player.tscn::PackedScene::5019175120893452054::1743505481::0::1::::<><>::res://Scripts/player.gd<>uid://bfydqp48ijdw1::::res://Sprites/lulu.png
+temp_enemy_shooter.tscn::PackedScene::7197372459588858543::1743503054::0::1::::<><>::uid://dj4jjlupt0mcc::::res://Sprites/Sea lizorse.png<>res://Scripts/temp_enemy_shooter.gd
+::res://Scripts/::1743505481
+basic_boolet.gd::GDScript::-1::1743505481::0::1::::<>CharacterBody2D<>::
+player.gd::GDScript::-1::1743505481::0::1::::<>CharacterBody2D<>::
 temp_enemy_shooter.gd::GDScript::-1::1737998185::0::1::::<>CharacterBody2D<>::
-::res://Sprites/::1737937285
+::res://Sprites/::1743493952
 icon.svg::CompressedTexture2D::8205939154552448697::1734119986::1743493952::1::::<><>::
 lulu.png::CompressedTexture2D::2787121525821473210::1734120708::1743493952::1::::<><>::
 Sea lizorse.png::CompressedTexture2D::7851391733130228558::1737937278::1743493952::1::::<><>::

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://daspw43dikf8j"]
 
 [ext_resource type="Texture2D" uid="uid://dj4jjlupt0mcc" path="res://Sprites/Sea lizorse.png" id="1_1o6d1"]
-[ext_resource type="Script" path="res://Scripts/temp_enemy_shooter.gd" id="1_gypfn"]
+[ext_resource type="Script" uid="uid://64ocnk0euimb" path="res://Scripts/temp_enemy_shooter.gd" id="1_gypfn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_spvoc"]
 size = Vector2(100, 120)
